@@ -22,6 +22,9 @@ del JLinkLog.txt /s
 
 del *.iex /s
 del *.htm /s
-::del *.sct /s
 del *.map /s
+del *.sct /s
+del *.hex /s
+del *.uvguix.* /s
+
 exit
