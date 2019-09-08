@@ -1,19 +1,9 @@
-/**
-  ******************************************************************************
-  * @file    main.c
-  * @author  fire
-  * @version V1.0
-  * @date    2015-xx-xx
-  * @brief   用1.5.1版本库建的工程模板
-  ******************************************************************************
-  * @attention
-  *
-  * 实验平台:野火  STM32 F429 开发板 
-  * 论坛    :http://www.firebbs.cn
-  * 淘宝    :https://fire-stm32.taobao.com
-  *
-  ******************************************************************************
-  */
+/*	
+ Copyright ? 2019-2019, Zhang Hongda, a64091937. All Rights Reserved.
+ Description:A Standard Build C Project
+ Author:Zhang Hongda
+ Creation time:2019-7-28
+ */
   
 #include "stm32f4xx.h"
 
