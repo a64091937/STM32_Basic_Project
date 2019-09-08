@@ -698,9 +698,9 @@
           <GroupName>DOC</GroupName>
           <Files>
             <File>
-              <FileName>必读说明.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\必读说明.txt</FilePath>
+              <FileName>README.md</FileName>
+              <FileType>9</FileType>
+              <FilePath>..\..\README.md</FilePath>
             </File>
           </Files>
         </Group>
