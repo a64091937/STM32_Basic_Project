@@ -17,8 +17,13 @@
   
 #include "stm32f4xx.h"
 #include "./led/bsp_led.h" 
+#include "./key/bsp_key.h" 
+
 
 void Delay(__IO u32 nCount); 
+void LED_test11(void);
+void KEY_test12(void);
+
 
 /**
   * @brief  主函数
@@ -26,6 +31,17 @@ void Delay(__IO u32 nCount);
   * @retval 无
   */
 int main(void)
+{
+    /* LED 端口初始化 */
+    LED_GPIO_Config();
+    /*初始化按键*/
+    Key_GPIO_Config();
+    // LED_test11(); // 第11章的代码 
+    KEY_test12(); // 第12章的代码 
+
+}
+
+void LED_test11(void)	 // LED闪烁的代码
 {
     for (;;) {
         LED1( ON ); 		 // 亮 
@@ -66,8 +82,22 @@ int main(void)
     	Delay(0xFFFFFF);
 
         
-    }    
-
+    } 
+}
+void KEY_test12(void)	 // KEY反转LED的代码
+{
+    /* 轮询按键状态，若按键按下则反转LED */ 
+    for (;;) {	   
+        if( Key_Scan(KEY1_GPIO_PORT,KEY1_PIN) == KEY_ON  ) {
+			/*LED1反转*/
+			LED1_TOGGLE;
+		}   
+    
+        if( Key_Scan(KEY2_GPIO_PORT,KEY2_PIN) == KEY_ON  ) {
+			/*LED2反转*/
+			LED2_TOGGLE;
+		}   
+	}
 }
 
 void Delay(__IO uint32_t nCount)	 //简单的延时函数
